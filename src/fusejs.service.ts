@@ -1,10 +1,9 @@
 import {Injectable} from '@angular/core'
 import * as Fuse from 'fuse.js'
-import FuseOptions = Fuse.FuseOptions;
+import {FuseOptions} from 'fuse.js'
 
-import _set = require('lodash.set');
-import _get = require('lodash.get');
-
+const _get = require('lodash.get');
+const _set = require('lodash.set');
 
 export interface AngularFusejsOptions extends FuseOptions {
   supportHighlight?: boolean;
@@ -31,7 +30,7 @@ export class FusejsService {
   };
 
   searchList(list: Array<any>, searchTerms: string, options: AngularFusejsOptions = {}) {
-    const fuseOptions: AngularFusejsOptions = Object.assign({}, this.defaultOptions, options);
+    const fuseOptions: AngularFusejsOptions = Object.assign(this.defaultOptions, options);
     let result = [];
 
     if (searchTerms && searchTerms.length >= fuseOptions.minSearchTermLength) {

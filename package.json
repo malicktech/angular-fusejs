@@ -4,12 +4,12 @@
   "description": "Angular plugin using fuse.js to search through a list of elements with a string. Supports highlight.",
   "main": "index.js",
   "dependencies": {
-    "fuse.js": "^3.2.0",
+    "fuse.js": "3.2.1",
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2"
   },
   "peerDependencies": {
-    "@angular/core": "^2.0.0"
+    "@angular/core": "8.2.14"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +30,9 @@
   },
   "homepage": "https://github.com/maleblond/angular-local-search#readme",
   "devDependencies": {
+    "@angular/core": "^8.2.14",
     "@types/lodash.get": "^4.4.2",
-    "@types/lodash.set": "^4.3.2"
+    "@types/lodash.set": "^4.3.2",
+    "@types/node": "^13.1.8"
   }
 }
